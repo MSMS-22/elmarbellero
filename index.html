@@ -3,11 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Marbellero</title>
+    <title>El Marbellero - Paella Tradicional y Comida Mediterránea a Domicilio</title>
+    
+    <!-- Essential Meta Tags -->
+    <meta name="description" content="Paella auténtica española cocinada en tu casa. Chef de Marbella prepara paella de mariscos, pollo, negra y vegetariana con ingredientes de calidad. Comida mediterránea a domicilio.">
+    <meta name="keywords" content="paella, paella a domicilio, comida mediterránea, catering paella, chef paella, paella española, paella valenciana, socarrat, cocina española, comida española">
+    <meta name="author" content="El Marbellero">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#dd9128">
+    <link rel="canonical" href="https://elmarbellero.com/">
+    
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="El Marbellero - Paella Tradicional Española a Domicilio">
+    <meta property="og:description" content="Paella auténtica cocinada en tu casa por chef de Marbella. Mariscos, pollo, negra o vegetariana. Cocino respetando la tradición con los mejores ingredientes.">
+    <meta property="og:image" content="https://elmarbellero.com/Socarrat.JPG">
+    <meta property="og:image:alt" content="Paella tradicional con socarrat - El Marbellero">
+    <meta property="og:url" content="https://elmarbellero.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="El Marbellero">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="El Marbellero - Paella Tradicional Española">
+    <meta name="twitter:description" content="Paella auténtica cocinada en tu casa. Chef de Marbella prepara paella de mariscos, pollo, negra y vegetariana.">
+    <meta name="twitter:image" content="https://elmarbellero.com/Socarrat.JPG">
+    <meta name="twitter:image:alt" content="Paella tradicional con socarrat">
+    
     <link rel="icon" type="image/png" href="Logo.png">
+    
+    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="Socarrat.JPG" as="image" type="image/jpeg">
+    <link rel="preload" href="Logo.png" as="image" type="image/png">
+    
+    <!-- Font with font-display swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "@id": "https://elmarbellero.com/#restaurant",
+      "name": "El Marbellero",
+      "image": [
+        "https://elmarbellero.com/Socarrat.JPG",
+        "https://elmarbellero.com/Logo.png",
+        "https://elmarbellero.com/Paella1.png"
+      ],
+      "logo": "https://elmarbellero.com/Logo.png",
+      "description": "Paella auténtica española y comida mediterránea a domicilio. Chef de Marbella cocina en tu casa con ingredientes tradicionales de calidad.",
+      "servesCuisine": ["Spanish", "Mediterranean", "Paella"],
+      "priceRange": "$$",
+      "email": "elmarbellero@gmail.com",
+      "url": "https://elmarbellero.com/",
+      "sameAs": [
+        "https://www.instagram.com/el.marbellero/"
+      ],
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Menú de Paellas",
+        "description": "Variedad de paellas tradicionales españolas",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Paellas",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Paella de Pollo",
+                "description": "Paella tradicional con pollo de calidad"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Paella de Mariscos",
+                "description": "Paella con mariscos frescos"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Paella Negra",
+                "description": "Paella con tinta de calamar"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Paella de la Huerta",
+                "description": "Paella vegetariana con verduras frescas",
+                "suitableForDiet": "https://schema.org/VegetarianDiet"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -454,6 +554,7 @@
             background-color: transparent;
             transition: background-color 0.3s ease;
             cursor: pointer;
+            padding: 0;
         }
         
         .dot.active {
@@ -672,6 +773,7 @@
             background-color: transparent;
             transition: background-color 0.3s ease;
             cursor: pointer;
+            padding: 0;
         }
         
         .cliente-dot.active {
@@ -780,6 +882,7 @@
             display: flex;
             align-items: center;
             gap: 30px;
+            font-style: normal;
         }
         
         .footer-contact-item {
@@ -871,17 +974,17 @@
             <canvas class="aurora-canvas" id="auroraCanvas"></canvas>
         </div>
         
-        <h1 class="main-title">El Marbellero</h1>
+        <h1 class="main-title">El Marbellero - Paella Tradicional a Domicilio</h1>
         
         <div class="image-card">
             <div class="image-card-inner">
-                <img src="Socarrat.JPG" alt="Paella Socarrat" class="socarrat-image">
-                <img src="Logo.png" alt="El Marbellero Logo" class="logo-overlay">
+                <img src="Socarrat.JPG" alt="Paella valenciana tradicional con socarrat perfecto - El Marbellero" class="socarrat-image" loading="eager" fetchpriority="high" width="800" height="600">
+                <img src="Logo.png" alt="Logo El Marbellero - Paella y comida mediterránea española" class="logo-overlay" width="200" height="200">
             </div>
         </div>
         
         <div class="container">
-            <p class="info-text">Paellas y comida mediterránea a domicilio</p>
+            <p class="info-text">Paellas auténticas y comida mediterránea española a domicilio</p>
             <p class="contact-links">
                 <a href="https://www.instagram.com/el.marbellero/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <span class="separator">|</span>
@@ -905,46 +1008,47 @@
         </div>
     </section>
     
-    <section class="rotating-cards-section">
+    <section class="rotating-cards-section" aria-label="Nuestras paellas y servicio">
         <div class="cards-container">
-            <div class="card active">
+            <article class="card active">
                 <div class="card-media">
-                    <video autoplay loop muted playsinline>
+                    <video autoplay loop muted playsinline preload="metadata" poster="Socarrat.JPG" aria-label="Video de paella cocinándose">
                         <source src="Paella Video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
                     </video>
                 </div>
                 <div class="card-text">
                     <p>Cocino paella de pollo, mariscos, negra o de la huerta sin carne solo pura verdura.</p>
                 </div>
-            </div>
+            </article>
             
-            <div class="card">
+            <article class="card">
                 <div class="card-media">
-                    <img src="Paella1.png" alt="Max el Marbellero cocinando paella">
+                    <img src="Paella1.png" alt="Max el Marbellero chef español cocinando paella tradicional en paellera" loading="lazy" width="600" height="450">
                 </div>
                 <div class="card-text">
                     <p>Soy Max nací en Marbella-España y llevo años haciendo paella, yo voy a tu casa a cocinar.</p>
                 </div>
-            </div>
+            </article>
             
-            <div class="card">
+            <article class="card">
                 <div class="card-media">
-                    <img src="Paella 3.jpg" alt="Paella tradicional">
+                    <img src="Paella 3.jpg" alt="Paella tradicional española con arroz perfectamente cocinado" loading="lazy" width="600" height="450">
                 </div>
                 <div class="card-text">
                     <p>Llámame y prueba tu nueva Paella favorita</p>
                 </div>
-            </div>
+            </article>
             
-            <div class="card-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+            <nav class="card-dots" aria-label="Navegación del carrusel de paellas">
+                <button class="dot" aria-label="Ver primera paella"></button>
+                <button class="dot" aria-label="Ver segunda paella"></button>
+                <button class="dot" aria-label="Ver tercera paella"></button>
+            </nav>
         </div>
     </section>
     
-    <section class="clientes-section">
+    <section class="clientes-section" aria-label="Testimonios de clientes satisfechos">
         <div class="clientes-content">
             <div class="clientes-title-container">
                 <h2 class="clientes-title">Clientes<br>Felices</h2>
@@ -952,24 +1056,24 @@
             <div class="clientes-carousel-wrapper">
                 <div class="clientes-carousel">
                     <div class="cliente-card active">
-                        <img src="Clientes/Cliente1.png" alt="Cliente testimonial 1">
+                        <img src="Clientes/Cliente1.png" alt="Testimonio de cliente satisfecho de El Marbellero - Paella deliciosa" loading="lazy" width="600" height="400">
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 3.png" alt="Cliente testimonial 3">
+                        <img src="Clientes/Cliente 3.png" alt="Reseña positiva de cliente de paella española" loading="lazy" width="600" height="400">
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 4.png" alt="Cliente testimonial 4">
+                        <img src="Clientes/Cliente 4.png" alt="Cliente feliz con el servicio de catering de paella" loading="lazy" width="600" height="400">
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 5.png" alt="Cliente testimonial 5">
+                        <img src="Clientes/Cliente 5.png" alt="Opinión de cliente sobre la paella tradicional de El Marbellero" loading="lazy" width="600" height="400">
                     </div>
                 </div>
-                <div class="clientes-dots">
-                    <span class="cliente-dot active"></span>
-                    <span class="cliente-dot"></span>
-                    <span class="cliente-dot"></span>
-                    <span class="cliente-dot"></span>
-                </div>
+                <nav class="clientes-dots" aria-label="Navegación de testimonios de clientes">
+                    <button class="cliente-dot active" aria-label="Ver testimonio 1"></button>
+                    <button class="cliente-dot" aria-label="Ver testimonio 2"></button>
+                    <button class="cliente-dot" aria-label="Ver testimonio 3"></button>
+                    <button class="cliente-dot" aria-label="Ver testimonio 4"></button>
+                </nav>
             </div>
         </div>
     </section>
@@ -977,20 +1081,20 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="Logo.png" alt="El Marbellero Logo">
+                <img src="Logo.png" alt="Logo El Marbellero - Chef de paella española" width="120" height="120" loading="lazy">
             </div>
-            <div class="footer-contact">
+            <address class="footer-contact">
                 <a href="https://www.instagram.com/el.marbellero/" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Visitar Instagram de El Marbellero">
                     <span class="footer-contact-text">Instagram</span>
                 </a>
                 <a href="mailto:elmarbellero@gmail.com" class="footer-contact-item" aria-label="Enviar correo a El Marbellero">
                     <span class="footer-contact-text">Correo</span>
                 </a>
-            </div>
+            </address>
         </div>
         <div class="footer-divider"></div>
         <div class="footer-bottom">
-            © 2026 El Marbellero. Paellas y comida mediterránea a domicilio.
+            © 2026 El Marbellero. Paellas auténticas y comida mediterránea española a domicilio.
         </div>
     </footer>
     
@@ -1194,6 +1298,15 @@
                 // Restart the auto-rotate timer after manual click
                 startAutoRotate();
             });
+            
+            // Add keyboard support (Enter and Space)
+            dot.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    showCard(index);
+                    startAutoRotate();
+                }
+            });
         });
         
         // Add click handler to rotate on card click (but not dots)
@@ -1203,6 +1316,22 @@
                 rotateCards();
                 // Restart the auto-rotate timer after manual click
                 startAutoRotate();
+            }
+        });
+        
+        // Keyboard navigation for cards (Arrow keys)
+        document.addEventListener('keydown', function(e) {
+            if (e.target.closest('.rotating-cards-section')) {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    rotateCards();
+                    startAutoRotate();
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevIndex = (currentCardIndex - 1 + cards.length) % cards.length;
+                    showCard(prevIndex);
+                    startAutoRotate();
+                }
             }
         });
         
@@ -1253,6 +1382,15 @@
                 showClienteCard(index);
                 // Restart the auto-rotate timer after manual click
                 startClienteAutoRotate();
+            });
+            
+            // Add keyboard support (Enter and Space)
+            dot.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    showClienteCard(index);
+                    startClienteAutoRotate();
+                }
             });
         });
         

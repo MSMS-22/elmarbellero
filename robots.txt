@@ -1,0 +1,9 @@
+# robots.txt for El Marbellero
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://elmarbellero.com/sitemap.xml
+
+# Disallow specific files if needed
+Disallow: /private/
