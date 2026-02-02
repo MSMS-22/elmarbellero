@@ -476,24 +476,30 @@
             }
             
             .cards-container {
-                gap: 30px;
-                min-height: auto;
+                flex-direction: column;
+                align-items: center;
+                min-height: 600px;
                 padding-bottom: 60px;
+                position: relative;
             }
             
             .card {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
                 flex-direction: column;
-                gap: 25px;
-                position: relative;
+                align-items: center;
+                gap: 20px;
                 width: 100%;
+                max-width: 600px;
             }
             
             .card-media {
                 flex: 0 0 auto;
                 width: 100%;
-                max-width: 550px;
+                max-width: 100%;
                 border-radius: 20px;
-                margin: 0 auto;
             }
             
             .card-dots {
@@ -511,11 +517,11 @@
                 flex: 0 0 auto;
                 padding: 0 20px;
                 text-align: center;
-                max-width: 100%;
+                width: 100%;
             }
             
             .card-text p {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
         }
         
@@ -525,16 +531,17 @@
             }
             
             .cards-container {
-                gap: 20px;
+                min-height: 550px;
             }
             
             .card {
-                gap: 20px;
+                gap: 15px;
+                max-width: 500px;
             }
             
             .card-media {
                 width: 100%;
-                max-width: 480px;
+                max-width: 100%;
                 border-radius: 15px;
             }
             
@@ -544,23 +551,32 @@
             }
             
             .card-text {
-                padding: 0 15px;
+                padding: 0 10px;
             }
             
             .card-text p {
-                font-size: 1rem;
+                font-size: 0.95rem;
                 line-height: 1.4;
             }
         }
         
         @media (max-width: 400px) {
+            .cards-container {
+                min-height: 500px;
+            }
+            
+            .card {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            
             .card-media {
                 width: 100%;
-                max-width: 380px;
+                max-width: 100%;
             }
             
             .card-text p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
         }
         
@@ -904,7 +920,7 @@
             
             <div class="card">
                 <div class="card-media">
-                    <img src="Paella1.PNG" alt="Max el Marbellero cocinando paella">
+                    <img src="Paella1.png" alt="Max el Marbellero cocinando paella">
                 </div>
                 <div class="card-text">
                     <p>Soy Max nací en Marbella-España y llevo años haciendo paella, yo voy a tu casa a cocinar.</p>
