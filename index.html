@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5JP2FGW8');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Marbellero - Paella Tradicional a Domicilio CDMX</title>
@@ -49,13 +42,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="Socarrat.webp" as="image" type="image/webp">
-    <link rel="preload" href="Logo.png" as="image" type="image/png">
+    <!-- Preload critical resources with responsive sizes -->
+    <link rel="preload" as="image" type="image/webp" href="Socarrat-800.webp" imagesrcset="Socarrat-400.webp 400w, Socarrat-800.webp 800w" imagesizes="(max-width: 600px) 100vw, 800px">
+    <link rel="preload" as="image" type="image/webp" href="Logo-200.webp">
     
     <!-- Font: load asynchronously to avoid render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&amp;display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap"></noscript>
     
     <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -166,16 +159,37 @@
             height: 100%;
             z-index: 0;
             overflow: hidden;
+            background: linear-gradient(135deg, #ff6666, #e3e57b, #ff2929, #e3e57b, #ff6666);
+            background-size: 400% 400%;
+            animation: aurora-shift 12s ease infinite;
         }
         
-        .aurora-canvas {
+        .aurora-background::after {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: -10%;
+            left: -10%;
             width: 120%;
             height: 120%;
-            filter: blur(60px);
+            background:
+                radial-gradient(ellipse at 30% 40%, rgba(227,229,123,0.5), transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(255,102,102,0.4), transparent 55%),
+                radial-gradient(ellipse at 50% 80%, rgba(255,41,41,0.3), transparent 50%);
+            animation: aurora-pulse 8s ease-in-out infinite alternate;
+            filter: blur(40px);
+        }
+        
+        @keyframes aurora-shift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 0%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes aurora-pulse {
+            0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+            100% { opacity: 1; transform: scale(1.15) rotate(3deg); }
         }
         
         header::before {
@@ -217,12 +231,6 @@
             padding-bottom: 75%;
         }
         
-        .image-card-inner picture,
-        .card-media picture,
-        .cliente-card picture,
-        .footer-logo picture {
-            display: contents;
-        }
         
         .socarrat-image {
             position: absolute;
@@ -1005,21 +1013,19 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
-        <div class="aurora-background">
-            <canvas class="aurora-canvas" id="auroraCanvas"></canvas>
-        </div>
+        <div class="aurora-background"></div>
         
         <h1 class="main-title">El Marbellero</h1>
         
         <div class="image-card">
             <div class="image-card-inner">
                 <picture>
-                    <source srcset="Socarrat.webp" type="image/webp">
-                    <img src="Socarrat.JPG" alt="Paella valenciana tradicional con socarrat perfecto - El Marbellero" class="socarrat-image" loading="eager" fetchpriority="high" width="800" height="600">
+                    <source srcset="Socarrat-400.webp 400w, Socarrat-800.webp 800w" type="image/webp" sizes="(max-width: 600px) 100vw, 800px">
+                    <img src="Socarrat.webp" alt="Paella valenciana tradicional con socarrat perfecto - El Marbellero" class="socarrat-image" loading="eager" fetchpriority="high" width="800" height="600">
                 </picture>
                 <picture>
-                    <source srcset="Logo.webp" type="image/webp">
-                    <img src="Logo.png" alt="Logo El Marbellero - Paella y comida mediterránea española" class="logo-overlay" width="200" height="200">
+                    <source srcset="Logo-100.webp 100w, Logo-200.webp 200w" type="image/webp" sizes="200px">
+                    <img src="Logo.webp" alt="Logo El Marbellero - Paella y comida mediterránea española" class="logo-overlay" width="200" height="200">
                 </picture>
             </div>
         </div>
@@ -1054,8 +1060,8 @@
         <div class="cards-container">
             <article class="card active">
                 <div class="card-media">
-                    <video autoplay loop muted playsinline preload="metadata" poster="Socarrat.webp" aria-label="Video de paella cocinándose">
-                        <source src="Paella Video.mp4" type="video/mp4">
+                    <video autoplay loop muted playsinline preload="none" poster="Socarrat.webp" aria-label="Video de paella cocinándose">
+                        <source data-src="Paella Video.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
                 </div>
@@ -1067,8 +1073,8 @@
             <article class="card">
                 <div class="card-media">
                     <picture>
-                        <source srcset="Paella1.webp" type="image/webp">
-                        <img src="Paella1.png" alt="Max el Marbellero chef español cocinando paella tradicional en paellera" loading="lazy" width="600" height="450">
+                        <source srcset="Paella1-400.webp 400w, Paella1-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                        <img src="Paella1.webp" alt="Max el Marbellero chef español cocinando paella tradicional en paellera" loading="lazy" width="600" height="450">
                     </picture>
                 </div>
                 <div class="card-text">
@@ -1079,8 +1085,8 @@
             <article class="card">
                 <div class="card-media">
                     <picture>
-                        <source srcset="Paella 3.webp" type="image/webp">
-                        <img src="Paella 3.jpg" alt="Paella tradicional española con arroz perfectamente cocinado" loading="lazy" width="600" height="450">
+                        <source srcset="Paella 3-400.webp 400w, Paella 3-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                        <img src="Paella 3.webp" alt="Paella tradicional española con arroz perfectamente cocinado" loading="lazy" width="600" height="450">
                     </picture>
                 </div>
                 <div class="card-text">
@@ -1105,26 +1111,26 @@
                 <div class="clientes-carousel">
                     <div class="cliente-card active">
                         <picture>
-                            <source srcset="Clientes/Cliente1.webp" type="image/webp">
-                            <img src="Clientes/Cliente1.png" alt="Testimonio de cliente satisfecho de El Marbellero - Paella deliciosa" loading="lazy" width="600" height="400">
+                            <source srcset="Clientes/Cliente1-400.webp 400w, Clientes/Cliente1-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                            <img src="Clientes/Cliente1.webp" alt="Testimonio de cliente satisfecho de El Marbellero - Paella deliciosa" loading="lazy" width="600" height="400">
                         </picture>
                     </div>
                     <div class="cliente-card">
                         <picture>
-                            <source srcset="Clientes/Cliente 3.webp" type="image/webp">
-                            <img src="Clientes/Cliente 3.png" alt="Reseña positiva de cliente de paella española" loading="lazy" width="600" height="400">
+                            <source srcset="Clientes/Cliente 3-400.webp 400w, Clientes/Cliente 3-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                            <img src="Clientes/Cliente 3.webp" alt="Reseña positiva de cliente de paella española" loading="lazy" width="600" height="400">
                         </picture>
                     </div>
                     <div class="cliente-card">
                         <picture>
-                            <source srcset="Clientes/Cliente 4.webp" type="image/webp">
-                            <img src="Clientes/Cliente 4.png" alt="Cliente feliz con el servicio de catering de paella" loading="lazy" width="600" height="400">
+                            <source srcset="Clientes/Cliente 4-400.webp 400w, Clientes/Cliente 4-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                            <img src="Clientes/Cliente 4.webp" alt="Cliente feliz con el servicio de catering de paella" loading="lazy" width="600" height="400">
                         </picture>
                     </div>
                     <div class="cliente-card">
                         <picture>
-                            <source srcset="Clientes/Cliente 5.webp" type="image/webp">
-                            <img src="Clientes/Cliente 5.png" alt="Opinión de cliente sobre la paella tradicional de El Marbellero" loading="lazy" width="600" height="400">
+                            <source srcset="Clientes/Cliente 5-400.webp 400w, Clientes/Cliente 5-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 100vw, 600px">
+                            <img src="Clientes/Cliente 5.webp" alt="Opinión de cliente sobre la paella tradicional de El Marbellero" loading="lazy" width="600" height="400">
                         </picture>
                     </div>
                 </div>
@@ -1142,8 +1148,8 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <picture>
-                    <source srcset="Logo.webp" type="image/webp">
-                    <img src="Logo.png" alt="Logo El Marbellero - Chef de paella española" width="120" height="120" loading="lazy">
+                    <source srcset="Logo-100.webp 100w, Logo-200.webp 200w" type="image/webp" sizes="120px">
+                    <img src="Logo.webp" alt="Logo El Marbellero - Chef de paella española" width="120" height="120" loading="lazy">
                 </picture>
             </div>
             <address class="footer-contact">
@@ -1165,164 +1171,15 @@
     </footer>
     
     <script>
-        // Aurora Background Animation
-        const canvas = document.getElementById('auroraCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        // Set canvas size
-        function resizeCanvas() {
-            canvas.width = window.innerWidth * 1.2;
-            canvas.height = window.innerHeight * 1.2;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-        
-        // Aurora configuration
-        const colorStops = ['#ff6666', '#e3e57b', '#ff2929'];
-        const amplitude = 0.6;
-        const blend = 1;
-        
-        // Convert hex to RGB
-        function hexToRgb(hex) {
-            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-            return result ? {
-                r: parseInt(result[1], 16),
-                g: parseInt(result[2], 16),
-                b: parseInt(result[3], 16)
-            } : null;
-        }
-        
-        const colors = colorStops.map(hexToRgb);
-        
-        // Noise function for organic movement
-        class SimplexNoise {
-            constructor() {
-                this.grad3 = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],
-                             [1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],
-                             [0,1,1],[0,-1,1],[0,1,-1],[0,-1,-1]];
-                this.p = [];
-                for(let i=0; i<256; i++) {
-                    this.p[i] = Math.floor(Math.random()*256);
-                }
-                this.perm = [];
-                for(let i=0; i<512; i++) {
-                    this.perm[i]=this.p[i & 255];
-                }
+        // Lazy-load video when its card becomes visible
+        (function() {
+            var vid = document.querySelector('.card.active video');
+            if (vid) {
+                var src = vid.querySelector('source[data-src]');
+                if (src) { src.setAttribute('src', src.getAttribute('data-src')); vid.load(); }
             }
-            
-            dot(g, x, y) {
-                return g[0]*x + g[1]*y;
-            }
-            
-            noise(xin, yin) {
-                let n0, n1, n2;
-                const F2 = 0.5*(Math.sqrt(3.0)-1.0);
-                const s = (xin+yin)*F2;
-                const i = Math.floor(xin+s);
-                const j = Math.floor(yin+s);
-                const G2 = (3.0-Math.sqrt(3.0))/6.0;
-                const t = (i+j)*G2;
-                const X0 = i-t;
-                const Y0 = j-t;
-                const x0 = xin-X0;
-                const y0 = yin-Y0;
-                let i1, j1;
-                if(x0>y0) {i1=1; j1=0;}
-                else {i1=0; j1=1;}
-                const x1 = x0 - i1 + G2;
-                const y1 = y0 - j1 + G2;
-                const x2 = x0 - 1.0 + 2.0 * G2;
-                const y2 = y0 - 1.0 + 2.0 * G2;
-                const ii = i & 255;
-                const jj = j & 255;
-                const gi0 = this.perm[ii+this.perm[jj]] % 12;
-                const gi1 = this.perm[ii+i1+this.perm[jj+j1]] % 12;
-                const gi2 = this.perm[ii+1+this.perm[jj+1]] % 12;
-                let t0 = 0.5 - x0*x0-y0*y0;
-                if(t0<0) n0 = 0.0;
-                else {
-                    t0 *= t0;
-                    n0 = t0 * t0 * this.dot(this.grad3[gi0], x0, y0);
-                }
-                let t1 = 0.5 - x1*x1-y1*y1;
-                if(t1<0) n1 = 0.0;
-                else {
-                    t1 *= t1;
-                    n1 = t1 * t1 * this.dot(this.grad3[gi1], x1, y1);
-                }
-                let t2 = 0.5 - x2*x2-y2*y2;
-                if(t2<0) n2 = 0.0;
-                else {
-                    t2 *= t2;
-                    n2 = t2 * t2 * this.dot(this.grad3[gi2], x2, y2);
-                }
-                return 70.0 * (n0 + n1 + n2);
-            }
-        }
-        
-        const simplex = new SimplexNoise();
-        let time = 0;
-        
-        function drawAurora() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            const imageData = ctx.createImageData(canvas.width, canvas.height);
-            const data = imageData.data;
-            
-            for(let y = 0; y < canvas.height; y++) {
-                for(let x = 0; x < canvas.width; x++) {
-                    const index = (y * canvas.width + x) * 4;
-                    
-                    // Generate noise value
-                    const noise1 = simplex.noise(x * 0.003 + time * 0.3, y * 0.003 + time * 0.2);
-                    const noise2 = simplex.noise(x * 0.002 - time * 0.2, y * 0.002 + time * 0.15);
-                    const noise3 = simplex.noise(x * 0.004 + time * 0.25, y * 0.004 - time * 0.1);
-                    
-                    const combined = (noise1 + noise2 + noise3) / 3;
-                    const value = (combined + 1) / 2; // Normalize to 0-1
-                    
-                    // Apply amplitude
-                    const amplified = Math.pow(value, 1 - amplitude);
-                    
-                    // Interpolate between colors
-                    let r, g, b;
-                    if(amplified < 0.5) {
-                        const t = amplified * 2;
-                        r = colors[0].r * (1-t) + colors[1].r * t;
-                        g = colors[0].g * (1-t) + colors[1].g * t;
-                        b = colors[0].b * (1-t) + colors[1].b * t;
-                    } else {
-                        const t = (amplified - 0.5) * 2;
-                        r = colors[1].r * (1-t) + colors[2].r * t;
-                        g = colors[1].g * (1-t) + colors[2].g * t;
-                        b = colors[1].b * (1-t) + colors[2].b * t;
-                    }
-                    
-                    // Apply blend
-                    const alpha = amplified * blend * 255;
-                    
-                    data[index] = r;
-                    data[index + 1] = g;
-                    data[index + 2] = b;
-                    data[index + 3] = alpha;
-                }
-            }
-            
-            ctx.putImageData(imageData, 0, 0);
-            time += 0.005;
-            if (document.visibilityState !== 'hidden') {
-                requestAnimationFrame(drawAurora);
-            }
-        }
-        
-        document.addEventListener('visibilitychange', function() {
-            if (document.visibilityState === 'visible') {
-                drawAurora();
-            }
-        });
-        
-        drawAurora();
-        
+        })();
+
         // Card rotation functionality
         const cards = document.querySelectorAll('.card');
         const cardsContainer = document.querySelector('.cards-container');
@@ -1342,9 +1199,10 @@
             cards[currentCardIndex].classList.add('active');
             allDots[currentCardIndex].classList.add('active');
             
-            // If the new card has a video, ensure it plays
             const video = cards[currentCardIndex].querySelector('video');
             if (video) {
+                var src = video.querySelector('source[data-src]');
+                if (src) { src.setAttribute('src', src.getAttribute('data-src')); src.removeAttribute('data-src'); video.load(); }
                 video.play();
             }
         }
@@ -1470,6 +1328,16 @@
         
         // Initialize clientes carousel
         startClienteAutoRotate();
+
+        // Delayed GTM: load 3.5s after page load to avoid blocking LCP/TBT
+        setTimeout(function(){
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var j = document.createElement('script');
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-5JP2FGW8';
+            document.head.appendChild(j);
+        }, 3500);
     </script>
 </body>
 </html>
