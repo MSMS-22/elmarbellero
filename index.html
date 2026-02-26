@@ -50,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="Socarrat.JPG" as="image" type="image/jpeg">
+    <link rel="preload" href="Socarrat.webp" as="image" type="image/webp">
     <link rel="preload" href="Logo.png" as="image" type="image/png">
     
     <!-- Font: load asynchronously to avoid render-blocking -->
@@ -215,6 +215,13 @@
             position: relative;
             width: 100%;
             padding-bottom: 75%;
+        }
+        
+        .image-card-inner picture,
+        .card-media picture,
+        .cliente-card picture,
+        .footer-logo picture {
+            display: contents;
         }
         
         .socarrat-image {
@@ -1006,8 +1013,14 @@
         
         <div class="image-card">
             <div class="image-card-inner">
-                <img src="Socarrat.JPG" alt="Paella valenciana tradicional con socarrat perfecto - El Marbellero" class="socarrat-image" loading="eager" fetchpriority="high" width="800" height="600">
-                <img src="Logo.png" alt="Logo El Marbellero - Paella y comida mediterránea española" class="logo-overlay" width="200" height="200">
+                <picture>
+                    <source srcset="Socarrat.webp" type="image/webp">
+                    <img src="Socarrat.JPG" alt="Paella valenciana tradicional con socarrat perfecto - El Marbellero" class="socarrat-image" loading="eager" fetchpriority="high" width="800" height="600">
+                </picture>
+                <picture>
+                    <source srcset="Logo.webp" type="image/webp">
+                    <img src="Logo.png" alt="Logo El Marbellero - Paella y comida mediterránea española" class="logo-overlay" width="200" height="200">
+                </picture>
             </div>
         </div>
         
@@ -1041,7 +1054,7 @@
         <div class="cards-container">
             <article class="card active">
                 <div class="card-media">
-                    <video autoplay loop muted playsinline preload="metadata" poster="Socarrat.JPG" aria-label="Video de paella cocinándose">
+                    <video autoplay loop muted playsinline preload="metadata" poster="Socarrat.webp" aria-label="Video de paella cocinándose">
                         <source src="Paella Video.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
@@ -1053,7 +1066,10 @@
             
             <article class="card">
                 <div class="card-media">
-                    <img src="Paella1.png" alt="Max el Marbellero chef español cocinando paella tradicional en paellera" loading="lazy" width="600" height="450">
+                    <picture>
+                        <source srcset="Paella1.webp" type="image/webp">
+                        <img src="Paella1.png" alt="Max el Marbellero chef español cocinando paella tradicional en paellera" loading="lazy" width="600" height="450">
+                    </picture>
                 </div>
                 <div class="card-text">
                     <p>Soy Max nací en Marbella-España y llevo años haciendo paella, yo voy a tu casa a cocinar.</p>
@@ -1062,7 +1078,10 @@
             
             <article class="card">
                 <div class="card-media">
-                    <img src="Paella 3.jpg" alt="Paella tradicional española con arroz perfectamente cocinado" loading="lazy" width="600" height="450">
+                    <picture>
+                        <source srcset="Paella 3.webp" type="image/webp">
+                        <img src="Paella 3.jpg" alt="Paella tradicional española con arroz perfectamente cocinado" loading="lazy" width="600" height="450">
+                    </picture>
                 </div>
                 <div class="card-text">
                     <p>Llámame y prueba tu nueva Paella favorita</p>
@@ -1085,16 +1104,28 @@
             <div class="clientes-carousel-wrapper">
                 <div class="clientes-carousel">
                     <div class="cliente-card active">
-                        <img src="Clientes/Cliente1.png" alt="Testimonio de cliente satisfecho de El Marbellero - Paella deliciosa" loading="lazy" width="600" height="400">
+                        <picture>
+                            <source srcset="Clientes/Cliente1.webp" type="image/webp">
+                            <img src="Clientes/Cliente1.png" alt="Testimonio de cliente satisfecho de El Marbellero - Paella deliciosa" loading="lazy" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 3.png" alt="Reseña positiva de cliente de paella española" loading="lazy" width="600" height="400">
+                        <picture>
+                            <source srcset="Clientes/Cliente 3.webp" type="image/webp">
+                            <img src="Clientes/Cliente 3.png" alt="Reseña positiva de cliente de paella española" loading="lazy" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 4.png" alt="Cliente feliz con el servicio de catering de paella" loading="lazy" width="600" height="400">
+                        <picture>
+                            <source srcset="Clientes/Cliente 4.webp" type="image/webp">
+                            <img src="Clientes/Cliente 4.png" alt="Cliente feliz con el servicio de catering de paella" loading="lazy" width="600" height="400">
+                        </picture>
                     </div>
                     <div class="cliente-card">
-                        <img src="Clientes/Cliente 5.png" alt="Opinión de cliente sobre la paella tradicional de El Marbellero" loading="lazy" width="600" height="400">
+                        <picture>
+                            <source srcset="Clientes/Cliente 5.webp" type="image/webp">
+                            <img src="Clientes/Cliente 5.png" alt="Opinión de cliente sobre la paella tradicional de El Marbellero" loading="lazy" width="600" height="400">
+                        </picture>
                     </div>
                 </div>
                 <nav class="clientes-dots" aria-label="Navegación de testimonios de clientes">
@@ -1110,7 +1141,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="Logo.png" alt="Logo El Marbellero - Chef de paella española" width="120" height="120" loading="lazy">
+                <picture>
+                    <source srcset="Logo.webp" type="image/webp">
+                    <img src="Logo.png" alt="Logo El Marbellero - Chef de paella española" width="120" height="120" loading="lazy">
+                </picture>
             </div>
             <address class="footer-contact">
                 <a href="https://www.instagram.com/el.marbellero/" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Visitar Instagram de El Marbellero">
