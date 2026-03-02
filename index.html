@@ -199,7 +199,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.45);
             z-index: 1;
         }
         
@@ -212,6 +212,7 @@
             position: relative;
             z-index: 2;
             letter-spacing: 0.02em;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
         }
         
         .image-card {
@@ -263,28 +264,44 @@
         .info-text {
             font-size: 1.2rem;
             color: #fff;
-            margin-bottom: 0.5rem;
-            font-weight: 100;
+            margin-bottom: 1.2rem;
+            font-weight: 300;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
         }
         
         .contact-links {
-            font-size: 1.2rem;
-            color: #fff;
-            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         
         .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: 300;
             color: #fff;
-            text-decoration: underline;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            border: 1.5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.03em;
         }
         
         .contact-links a:hover {
-            color: #dd9128;
+            background: rgba(255, 255, 255, 0.22);
+            border-color: #fff;
+            color: #fff;
+            transform: translateY(-2px);
         }
         
-        .contact-links .separator {
-            margin: 0 0.5rem;
+        .contact-links a:focus-visible {
+            outline: 2px solid #dd9128;
+            outline-offset: 3px;
         }
         
         h1 {
@@ -359,9 +376,17 @@
                 font-size: 1.3rem;
             }
             
-            .info-text,
-            .contact-links {
+            .info-text {
                 font-size: 1.1rem;
+            }
+            
+            .contact-links {
+                gap: 10px;
+            }
+            
+            .contact-links a {
+                padding: 9px 20px;
+                font-size: 0.95rem;
             }
         }
         
@@ -398,9 +423,18 @@
                 font-size: 1.1rem;
             }
             
-            .info-text,
-            .contact-links {
+            .info-text {
                 font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-links {
+                gap: 8px;
+            }
+            
+            .contact-links a {
+                padding: 8px 18px;
+                font-size: 0.9rem;
             }
         }
         
@@ -1032,13 +1066,11 @@
         
         <div class="container">
             <p class="info-text">Paellas auténticas y comida mediterránea española a domicilio en CDMX</p>
-            <p class="contact-links">
+            <nav class="contact-links" aria-label="Contacto">
                 <a href="https://www.instagram.com/el.marbellero/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <span class="separator">|</span>
                 <a href="https://wa.me/522206782163" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <span class="separator">|</span>
                 <a href="mailto:elmarbelleromx@gmail.com">Mail</a>
-            </p>
+            </nav>
         </div>
     </header>
     
