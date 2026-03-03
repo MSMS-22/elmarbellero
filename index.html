@@ -483,15 +483,45 @@
         }
         
         .winter-cta a {
-            color: #7a7a7a;
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
             text-decoration: none;
-            border-bottom: 1px solid #7a7a7a;
-            transition: color 0.3s ease, border-color 0.3s ease;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        
+
         .winter-cta a:hover {
-            color: #dd9128;
-            border-color: #dd9128;
+            background-color: #1ebe5d;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .cta-intermedio {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background-color: #2c4a5a;
+        }
+
+        .cta-intermedio a {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-intermedio a:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
         }
         
         @media (max-width: 768px) {
@@ -1082,7 +1112,7 @@
                 Hostea a tu familia y amigos, yo voy a cocinar en tu casa para que tengáis un día memorable.
             </p>
             <p class="winter-cta">
-                <a href="https://ig.me/m/el.marbellero" target="_blank" rel="noopener noreferrer">Solo dime qué día</a>
+                <a href="https://wa.me/522206782163?text=Hola%2C%20quiero%20apartar%20una%20fecha%20para%20paella" target="_blank" rel="noopener noreferrer">Aparta tu fecha por WhatsApp</a>
             </p>
         </div>
     </section>
@@ -1132,6 +1162,10 @@
                 <button class="dot" aria-label="Ver tercera paella"></button>
             </nav>
         </div>
+    </section>
+
+    <section class="cta-intermedio">
+        <a href="https://wa.me/522206782163?text=Hola%2C%20quiero%20apartar%20una%20fecha%20para%20paella" target="_blank" rel="noopener noreferrer">Tengo fechas limitadas, escríbeme</a>
     </section>
     
     <section class="clientes-section" aria-label="Testimonios de clientes satisfechos">
