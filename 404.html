@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - El Marbellero</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#dd9128">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap"></noscript>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aurora-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ff6666, #e3e57b, #ff2929, #e3e57b, #ff6666);
+            background-size: 400% 400%;
+            animation: aurora-shift 12s ease infinite;
+        }
+
+        .aurora-background::after {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background:
+                radial-gradient(ellipse at 30% 40%, rgba(227,229,123,0.5), transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(255,102,102,0.4), transparent 55%),
+                radial-gradient(ellipse at 50% 80%, rgba(255,41,41,0.3), transparent 50%);
+            animation: aurora-pulse 8s ease-in-out infinite alternate;
+            filter: blur(40px);
+        }
+
+        @keyframes aurora-shift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 0%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes aurora-pulse {
+            0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+            100% { opacity: 1; transform: scale(1.15) rotate(3deg); }
+        }
+
+        .page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+            margin-bottom: 1rem;
+        }
+
+        .error-code {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9rem;
+            font-weight: 300;
+            color: #fff;
+            line-height: 1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.05em;
+        }
+
+        .error-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        .error-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 100;
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+            max-width: 440px;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: #fff;
+            text-decoration: none;
+            border: 1.5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.03em;
+            margin-top: 1rem;
+        }
+
+        .whatsapp-btn:hover {
+            background: rgba(255, 255, 255, 0.22);
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn:focus-visible {
+            outline: 2px solid #dd9128;
+            outline-offset: 3px;
+        }
+
+        .whatsapp-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 7rem;
+            }
+
+            .error-title {
+                font-size: 1.2rem;
+            }
+
+            .error-subtitle {
+                font-size: 1rem;
+            }
+
+            .whatsapp-btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                width: 90px;
+            }
+
+            .error-code {
+                font-size: 5.5rem;
+            }
+
+            .error-title {
+                font-size: 1.05rem;
+                max-width: 320px;
+            }
+
+            .error-subtitle {
+                font-size: 0.92rem;
+                max-width: 300px;
+            }
+
+            .whatsapp-btn {
+                padding: 11px 24px;
+                font-size: 0.92rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page-wrapper">
+        <div class="aurora-background" aria-hidden="true"></div>
+        <div class="content">
+            <img src="Logo-200.webp" alt="El Marbellero" class="logo" width="200" height="200" loading="eager">
+            <p class="error-code">404</p>
+            <p class="error-title">Esta página pasó del socarrat al quemat y desapareció</p>
+            <p class="error-subtitle">Pero si quieres estás buscando encargar tu paella.</p>
+            <a href="https://wa.me/522206782163" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                ¡Escribe directo a mi WhatsApp!
+            </a>
+        </div>
+    </main>
+</body>
+</html>
