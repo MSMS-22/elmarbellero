@@ -21,7 +21,7 @@
     <title>El Marbellero - Paella Tradicional a Domicilio CDMX</title>
     
     <!-- Essential Meta Tags -->
-    <meta name="description" content="Paella auténtica española cocinada en tu casa en CDMX. Chef de Marbella. Mariscos, pollo, negra o vegetariana. Comida mediterránea a domicilio en Ciudad de México.">
+    <meta name="description" content="Paella tradicional española auténtica a domicilio en CDMX. Chef Max de Marbella cocina en tu casa: paella de mariscos, pollo, negra o vegetariana. Reserva por WhatsApp.">
     <meta name="author" content="El Marbellero">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#dd9128">
@@ -33,7 +33,7 @@
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="El Marbellero - Paella Tradicional en CDMX a Domicilio">
-    <meta property="og:description" content="Paella auténtica cocinada en tu casa en Ciudad de México. Chef de Marbella. Mariscos, pollo, negra o vegetariana. Comida mediterránea a domicilio en CDMX.">
+    <meta property="og:description" content="Paella tradicional española auténtica a domicilio en CDMX. Chef Max de Marbella cocina en tu casa: mariscos, pollo, negra o vegetariana. Reserva por WhatsApp.">
     <meta property="og:image" content="https://elmarbellero.com/Socarrat-800.webp">
     <meta property="og:image:alt" content="Paella tradicional con socarrat - El Marbellero">
     <meta property="og:url" content="https://elmarbellero.com/">
@@ -44,7 +44,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="El Marbellero - Paella Tradicional en CDMX">
-    <meta name="twitter:description" content="Paella auténtica cocinada en tu casa en CDMX. Chef de Marbella. Mariscos, pollo, negra y vegetariana a domicilio.">
+    <meta name="twitter:description" content="Paella tradicional española auténtica a domicilio en CDMX. Chef Max de Marbella cocina en tu casa: mariscos, pollo, negra o vegetariana. Reserva por WhatsApp.">
     <meta name="twitter:image" content="https://elmarbellero.com/Socarrat-800.webp">
     <meta name="twitter:image:alt" content="Paella tradicional con socarrat">
     
@@ -194,14 +194,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Opero dentro de la Ciudad de México (CDMX). Si tienes dudas sobre si llego a tu colonia o zona, escríbeme y lo confirmamos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué tipos de paella ofrecen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tenemos cuatro variedades principales: Clásica valenciana (pollo y verduras, la receta tradicional de Valencia), de mariscos (especialidad del señorito, sin cáscaras), negra (con calamar en su tinta, intensa y sabrosa) y del huerto (completamente vegana, llena de sabor y color)."
           }
         },
         {
@@ -550,7 +542,6 @@
         
         .winter-section {
             width: 100%;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -647,10 +638,113 @@
             }
         }
         
+        .sobre-mi-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #2b4d5f;
+        }
+        
+        .sobre-mi-content {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .sobre-mi-image {
+            flex: 0 0 320px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .sobre-mi-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 3 / 4;
+        }
+        
+        .sobre-mi-text {
+            flex: 1;
+        }
+        
+        .sobre-mi-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #e8e3da;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.01em;
+        }
+        
+        .sobre-mi-text p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: rgba(232, 227, 218, 0.85);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sobre-mi-section {
+                padding: 60px 20px;
+            }
+            
+            .sobre-mi-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .sobre-mi-image {
+                flex: 0 0 auto;
+                max-width: 300px;
+                width: 100%;
+                border-radius: 25px;
+            }
+            
+            .sobre-mi-text {
+                text-align: center;
+            }
+            
+            .sobre-mi-text h2 {
+                font-size: 3rem;
+            }
+            
+            .sobre-mi-text p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .sobre-mi-section {
+                padding: 40px 20px;
+            }
+            
+            .sobre-mi-image {
+                max-width: 260px;
+                border-radius: 20px;
+            }
+            
+            .sobre-mi-text h2 {
+                font-size: 2.2rem;
+            }
+            
+            .sobre-mi-text p {
+                font-size: 1rem;
+            }
+        }
+        
         .rotating-cards-section {
             width: 100%;
-            min-height: 100vh;
-            background-color: #2b4d5f;
+            background-color: #e8e3da;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -716,7 +810,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.6rem;
             font-weight: 300;
-            color: #e8e3da;
+            color: #2c2c2c;
             line-height: 1.5;
             margin: 0;
         }
@@ -740,7 +834,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            border: 2px solid #e8e3da;
+            border: 2px solid #2c2c2c;
             background-color: transparent;
             transition: background-color 0.3s ease;
             cursor: pointer;
@@ -748,7 +842,7 @@
         }
         
         .dot.active {
-            background-color: #e8e3da;
+            background-color: #2c2c2c;
         }
         
         @media (max-width: 1024px) {
@@ -873,12 +967,11 @@
         
         .clientes-section {
             width: 100%;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 60px 20px;
-            background-color: #e8e3da;
+            background-color: #2b4d5f;
         }
         
         .clientes-content {
@@ -886,7 +979,7 @@
             width: 100%;
             display: flex;
             align-items: center;
-            gap: 80px;
+            gap: 60px;
         }
         
         .clientes-title-container {
@@ -897,7 +990,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 4rem;
             font-weight: 300;
-            color: #2c2c2c;
+            color: #e8e3da;
             line-height: 1.2;
             margin: 0;
             letter-spacing: 0.01em;
@@ -959,7 +1052,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            border: 2px solid #2c2c2c;
+            border: 2px solid #e8e3da;
             background-color: transparent;
             transition: background-color 0.3s ease;
             cursor: pointer;
@@ -967,7 +1060,22 @@
         }
         
         .cliente-dot.active {
-            background-color: #2c2c2c;
+            background-color: #e8e3da;
+        }
+        
+        .testimonials-text {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .testimonials-summary {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(232, 227, 218, 0.6);
+            margin: 0;
         }
         
         @media (max-width: 1024px) {
@@ -1035,12 +1143,155 @@
             }
         }
         
+        .menu-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #e8e3da;
+        }
+        
+        .menu-content {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .menu-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: #2c2c2c;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.01em;
+        }
+        
+        .menu-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #7a7a7a;
+            margin-bottom: 2rem;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .menu-item {
+            padding: 30px;
+            border: 1px solid rgba(44, 44, 44, 0.15);
+            border-radius: 20px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            border-color: rgba(44, 44, 44, 0.35);
+        }
+        
+        .menu-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #2c2c2c;
+            margin-bottom: 0.8rem;
+        }
+        
+        .menu-item p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .menu-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .menu-cta p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #7a7a7a;
+            margin-bottom: 1.2rem;
+        }
+        
+        .menu-cta a {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .menu-cta a:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .menu-section {
+                padding: 60px 20px;
+            }
+            
+            .menu-title {
+                font-size: 3rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .menu-item {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .menu-section {
+                padding: 40px 20px;
+            }
+            
+            .menu-title {
+                font-size: 2.2rem;
+            }
+            
+            .menu-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .menu-item {
+                padding: 20px;
+                border-radius: 15px;
+            }
+            
+            .menu-item h3 {
+                font-size: 1.2rem;
+            }
+            
+            .menu-item p {
+                font-size: 0.95rem;
+            }
+        }
+        
         .faq-section {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             background-color: #2b4d5f;
         }
         
@@ -1064,7 +1315,7 @@
             font-size: 1.1rem;
             font-weight: 300;
             color: rgba(232, 227, 218, 0.6);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .faq-item {
@@ -1179,6 +1430,89 @@
             
             .faq-answer {
                 font-size: 0.95rem;
+            }
+        }
+        
+        .final-cta-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #e8e3da;
+            text-align: center;
+        }
+        
+        .final-cta-content {
+            max-width: 600px;
+        }
+        
+        .final-cta-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #2c2c2c;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta-content p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: #7a7a7a;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .final-cta-content a {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .final-cta-content a:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .final-cta-section {
+                padding: 60px 20px;
+            }
+            
+            .final-cta-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .final-cta-content p {
+                font-size: 1.05rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .final-cta-section {
+                padding: 40px 20px;
+            }
+            
+            .final-cta-content h2 {
+                font-size: 2rem;
+            }
+            
+            .final-cta-content p {
+                font-size: 1rem;
+            }
+            
+            .final-cta-content a {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
             }
         }
         
@@ -1351,6 +1685,23 @@
         </div>
     </section>
     
+    <section class="sobre-mi-section" aria-label="Sobre Max, chef de El Marbellero">
+        <div class="sobre-mi-content">
+            <div class="sobre-mi-image">
+                <picture>
+                    <source srcset="Paella1-400.webp 400w, Paella1-600.webp 600w" type="image/webp" sizes="(max-width: 768px) 260px, 320px">
+                    <img src="Paella1.webp" alt="Max, chef español de Marbella, cocinando paella tradicional a domicilio en CDMX" loading="lazy" width="600" height="450">
+                </picture>
+            </div>
+            <div class="sobre-mi-text">
+                <h2>Soy Max,<br>de Marbella a tu mesa</h2>
+                <p>Nací en Marbella y, como buen lugar turístico español, había mucha paella, pero toda malísima. Durante muchos años simplemente no me gustó.</p>
+                <p>Todo cambió cuando probé una paella de verdad, hecha por una valenciana. Desde ese día se convirtió en una de mis comidas favoritas.</p>
+                <p>Llevo más de seis años perfeccionando mi receta y técnica para ofrecer en México lo que yo viví: una paella auténtica que te hace cambiar de idea sobre lo que es la paella.</p>
+            </div>
+        </div>
+    </section>
+    
     <section class="rotating-cards-section" aria-label="Nuestras paellas y servicio">
         <h2 class="visually-hidden">Tipos de paella: pollo, mariscos, negra y vegetariana</h2>
         <div class="cards-container">
@@ -1362,7 +1713,7 @@
                     </video>
                 </div>
                 <div class="card-text">
-                    <p>Cocino paella de pollo, mariscos, negra o de la huerta sin carne solo pura verdura.</p>
+                    <p>Cocino paella de pollo, mariscos, negra o de la huerta. Cada una con su receta tradicional, ingredientes frescos de calidad y el socarrat que solo se logra con fuego, paellera y paciencia.</p>
                 </div>
             </article>
             
@@ -1374,7 +1725,7 @@
                     </picture>
                 </div>
                 <div class="card-text">
-                    <p>Soy Max nací en Marbella-España y llevo años haciendo paella, yo voy a tu casa a cocinar.</p>
+                    <p>Soy Max, nací en Marbella, España. Llevo años perfeccionando la paella y ahora la cocino en tu casa en CDMX. Tú pones el lugar y los invitados, yo llevo todo lo demás: ingredientes, paellera, fuego y la experiencia completa.</p>
                 </div>
             </article>
             
@@ -1386,7 +1737,7 @@
                     </picture>
                 </div>
                 <div class="card-text">
-                    <p>Llámame y prueba tu nueva Paella favorita</p>
+                    <p>Escríbeme por WhatsApp, platícame tu evento y te armo una propuesta a la medida. Desde reuniones íntimas de 10 personas hasta fiestas grandes — siempre con paella recién hecha frente a tus invitados.</p>
                 </div>
             </article>
             
@@ -1436,6 +1787,38 @@
                     <button class="cliente-dot" aria-label="Ver testimonio 3"></button>
                     <button class="cliente-dot" aria-label="Ver testimonio 4"></button>
                 </nav>
+                <div class="testimonials-text">
+                    <p class="testimonials-summary">Más de 50 clientes satisfechos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="menu-section" aria-label="Menú de paellas">
+        <div class="menu-content">
+            <h2 class="menu-title">Nuestras<br>Paellas</h2>
+            <p class="menu-subtitle">Cuatro recetas tradicionales, cada una con su carácter. Mínimo 10 personas.</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Clásica valenciana</h3>
+                    <p>Pollo y verduras, la receta tradicional de Valencia.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>De mariscos</h3>
+                    <p>Especialidad del señorito, sin cáscaras para disfrutarla sin complicaciones.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Negra</h3>
+                    <p>Con calamar en su tinta, intensa y sabrosa.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Del huerto</h3>
+                    <p>Completamente vegana, llena de sabor y color.</p>
+                </div>
+            </div>
+            <div class="menu-cta">
+                <p>Cotización personalizada según tu evento y número de invitados.</p>
+                <a href="https://wa.me/522206782163?text=Hola%2C%20quiero%20cotizar%20una%20paella%20para%20mi%20evento" target="_blank" rel="noopener noreferrer">Pide tu cotización por WhatsApp</a>
             </div>
         </div>
     </section>
@@ -1474,19 +1857,6 @@
             </details>
             
             <details class="faq-item">
-                <summary>¿Qué tipos de paella ofrecen?</summary>
-                <div class="faq-answer">
-                    <p>Tenemos cuatro variedades principales:</p>
-                    <ul>
-                        <li><strong>Clásica valenciana</strong> — Pollo y verduras, la receta tradicional de Valencia.</li>
-                        <li><strong>De mariscos</strong> — Especialidad del señorito, sin cáscaras para disfrutarla sin complicaciones.</li>
-                        <li><strong>Negra</strong> — Con calamar en su tinta, intensa y sabrosa.</li>
-                        <li><strong>Del huerto</strong> — Completamente vegana, llena de sabor y color.</li>
-                    </ul>
-                </div>
-            </details>
-            
-            <details class="faq-item">
                 <summary>¿Qué está incluido en el servicio?</summary>
                 <div class="faq-answer">
                     <p>El servicio incluye todos los ingredientes, condimentos y la preparación en sitio. Si necesitas servicio de vajilla, bebidas, meseros u otros elementos para tu evento, los cotizamos por separado según tus necesidades.</p>
@@ -1499,6 +1869,14 @@
                     <p>Aceptamos transferencias bancarias. Para confirmar tu reserva, se solicita un anticipo del <strong>50% con una semana de anticipación</strong> al evento. El resto se liquida el día del servicio.</p>
                 </div>
             </details>
+        </div>
+    </section>
+    
+    <section class="final-cta-section" aria-label="Reserva tu paella">
+        <div class="final-cta-content">
+            <h2>¿Listo para probar una paella de verdad?</h2>
+            <p>Escríbeme, cuéntame sobre tu evento y te preparo una propuesta sin compromiso. Desde reuniones familiares hasta fiestas corporativas.</p>
+            <a href="https://wa.me/522206782163?text=Hola%2C%20quiero%20apartar%20una%20fecha%20para%20paella" target="_blank" rel="noopener noreferrer">Aparta tu fecha por WhatsApp</a>
         </div>
     </section>
     
